@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ meta.description|striptags }}">
+
+    <title>{{ meta.title }} - {{ site_title }}</title>
+	<!-- [ Social Media Meta Tags ] -->
+	<meta content='{{ meta.title }}' property='og:title'/>
+	<meta content='article' property='og:type'/>
+	<meta content='{{ config.facebook }}' property='article:publisher'/>
+	<meta content='{{ config.facebook }}' property='article:author'/>
+	<meta content='{{ current_page.url }}' property='og:url'/>
+	<meta content='{% if meta.img %}{{ meta.img }}{% else %}{{ theme_url }}/img/post-bg.jpg{% endif %}' property='og:image'/>
+	<meta content='{{ meta.description|striptags }}' property='og:description'/>
+	<meta content='{{ site_title }}' property='og:site_name'/>
+	<meta content='en_US' property='og:locale'/>
+	<meta content='summary_large_image' name='twitter:card'/>
+	<meta content='{{ meta.title }}' name='twitter:title'/>
+	<meta content='{{ config.twitter }}' name='twitter:site'/>
+	<meta content='{{ config.twitter }}' name='twitter:creator'/>
+	<meta content='{{ meta.description|striptags }}' name='twitter:description'/>
+	<meta content='{% if meta.img %}{{ meta.img }}{% else %}{{ theme_url }}/img/post-bg.jpg{% endif %}' name='twitter:image'/>
+    <!-- Bootstrap Core CSS -->
+    <link href="{{ theme_url }}/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="{{ theme_url }}/css/clean-blog.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <a class="navbar-brand" href="{{ base_url }}">Home</a>
+            </div>
+
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: {% if meta.img %} url({{ meta.img }}) {% else %} url('{{ theme_url }}/img/post-bg.jpg'){% endif %};">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <h1>{{ meta.title }}</h1>
+                        <h2 class="subheading">{{ meta.description }}</h2>
+                        <span class="meta">Posted by <a href="{{ meta.profile }}">{{ meta.author }}</a> on {{ meta.date }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+					{{ content }}
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a href="https://twitter.com/home?status={{ current_page.url }}" target="_blank" rel="noopener noreferrer">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/sharer/sharer.php?u={{ current_page.url }}" target="_blank" rel="noopener noreferrer">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://plus.google.com/share?url={{ current_page.url }}" target="_blank" rel="noopener noreferrer">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted">Copyright &copy; {{ site_title }} 2016</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
