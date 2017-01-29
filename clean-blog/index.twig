@@ -79,20 +79,22 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-			{% for page in paged_pages|sort_by("time")|reverse %}
-				<div class="post-preview">
-                    <a href="{{ page.url }}">
-                        <h2 class="post-title">
-							{{ page.title }}
-                        </h2>
-                        <h3 class="post-subtitle">
-							{{ page.description }}
-                        </h3>
-                    </a>
-                    <p class="post-meta">Posted by {{ page.author }} on {{ page.date }}</p>
-                </div>
-                <hr>
-            {% endfor %}   
+                {% if paged_pages %}
+                    {% for page in paged_pages|sort_by("time")|reverse %}
+                        <div class="post-preview">
+                            <a href="{{ page.url }}">
+                                <h2 class="post-title">
+                                    {{ page.title }}
+                                </h2>
+                                <h3 class="post-subtitle">
+                                    {{ page.description }}
+                                </h3>
+                            </a>
+                            <p class="post-meta">Posted by {{ page.author }} on {{ page.date }}</p>
+                        </div>
+                        <hr>
+                    {% endfor %}
+                {% endif %}
                 <!-- Pager -->
                 <ul class="pager">
 					{% if page_number > 1 %}
