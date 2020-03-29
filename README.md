@@ -19,7 +19,11 @@ For the pagination I use [Pico Pagination Plugin](https://github.com/rewdy/Pico-
 ```sh
 $config['pagination_limit'] = 4;
 ```
-
+For Pico CMS >= 2.0 add to config/config.yml
+```sh
+theme: clean-blog
+```
+(If the file does not exist, create it. For more info see config/config.yml.template)
 ### Home Page & Post Page
 Copy index.md & post.md from content-sample to your content folder and change the meta data
 
