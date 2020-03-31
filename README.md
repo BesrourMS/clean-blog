@@ -30,4 +30,4 @@ Copy index.md & post.md from content-sample to your content folder and change th
 ### Demo : [link](http://blackrockdigital.github.io/startbootstrap-clean-blog/)
 
 ### Screenshot
-![Clean-Blog-Screenshot](http://img15.hostingpics.net/pics/590149Sanstitre1.png)
+![Clean-Blog-Screenshot](https://startbootstrap.com/assets/img/screenshots/themes/clean-blog.png)
