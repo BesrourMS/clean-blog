@@ -14,7 +14,7 @@
 	<meta content='{{ site_title }}' property='og:title'/>
 	<meta content='website' property='og:type'/>
 	<meta content='{{ current_page.url }}' property='og:url'/>
-	<meta content='{% if meta.img %}{{ meta.img }}{% else %}{{ theme_url }}/img/home-bg.jpg{% endif %}' property='og:image'/>
+	<meta content='{% if meta.img %}{{ meta.img | url }}{% else %}{{ theme_url }}/img/home-bg.jpg{% endif %}' property='og:image'/>
 	<meta content="{{ meta.description|striptags }}" property='og:description'/>
 	<meta content='{{ site_title }}' property='og:site_name'/>
 	<meta content='en_US' property='og:locale'/>
@@ -23,7 +23,7 @@
 	<meta content='{{ config.twitter }}' name='twitter:site'/>
 	<meta content='{{ config.twitter }}' name='twitter:creator'/>
 	<meta content='{{ meta.description|striptags }}' name='twitter:description'/>
-	<meta content='{% if meta.img %}{{ meta.img }}{% else %}{{ theme_url }}/img/home-bg.jpg{% endif %}' name='twitter:image'/>
+	<meta content='{% if meta.img %}{{ meta.img | url }}{% else %}{{ theme_url }}/img/home-bg.jpg{% endif %}' name='twitter:image'/>
     <!-- Bootstrap Core CSS -->
     <link href="{{ theme_url }}/css/bootstrap.min.css" rel="stylesheet">
 
