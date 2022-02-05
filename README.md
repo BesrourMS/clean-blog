@@ -27,7 +27,7 @@ $config['author'] = 'Your Name';
 $config['facebook'] = 'https://www.facebook.com/YourPage';
 $config['twitter'] = '@username';
 ```
-Install the '[Pico Pagination Plugin](https://github.com/rewdy/Pico-Pagination)', which allows to show several pages of articles titles. Go to this page to download and install it : https://github.com/rewdy/Pico-Pagination . It is basically just copying one file, very easy.Then so you must add this setting to config.php
+Install the [Pico Pagination Plugin](https://github.com/rewdy/Pico-Pagination), which allows to show several pages of articles titles. Go to this page to download and install it : https://github.com/rewdy/Pico-Pagination . It is basically just copying one file, very easy.Then so you must add this setting to config.php
 ```sh
 $config['pagination_limit'] = 4;
 ```
@@ -63,7 +63,7 @@ pagination_limit: 4
 
 
 
-## Demo : [link](http://blackrockdigital.github.io/startbootstrap-clean-blog/)
+## Demo : [link](https://startbootstrap.com/previews/clean-blog)
 
 ## Screenshot
-![Clean-Blog-Screenshot](https://startbootstrap.com/assets/img/screenshots/themes/clean-blog.png)
+![Clean-Blog-Screenshot](https://assets.startbootstrap.com/img/screenshots/themes/clean-blog.png)
