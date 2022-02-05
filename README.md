@@ -51,6 +51,10 @@ You can also simply put an URL of a picture if needed.
 # Pico Pagination Plugin
 pagination_limit: 4
 ```
+-   Activate URL rewriting
+```sh
+rewrite_url: true
+```
 
 ## Adding a new blog article
 -	You can create a new blog article by copying the '/content/blog.md’ file to a new file called 'blog-2021-03-04_Article_title.md’.
