@@ -10,7 +10,7 @@
 		<meta content='{{ site_title }}' property='og:title'/>
 		<meta content='website' property='og:type'/>
 		<meta content='{{ current_page.url }}' property='og:url'/>
-		<meta content='{% if meta.img %}{{ meta.img | url }}{% else %}{{ theme_url }}/img/home-bg.jpg{% endif %}' property='og:image'/>
+		<meta content='{% if meta.img %}{{ meta.img | url }}{% else %}{{ theme_url }}/img/home-bg.webp{% endif %}' property='og:image'/>
 		<meta content="{{ meta.description|striptags }}" property='og:description'/>
 		<meta content='{{ site_title }}' property='og:site_name'/>
 		<meta content='en_US' property='og:locale'/>
@@ -19,7 +19,7 @@
 		<meta content='{{ config.twitter }}' name='twitter:site'/>
 		<meta content='{{ config.twitter }}' name='twitter:creator'/>
 		<meta content='{{ meta.description|striptags }}' name='twitter:description'/>
-		<meta content='{% if meta.img %}{{ meta.img | url }}{% else %}{{ theme_url }}/img/home-bg.jpg{% endif %}' name='twitter:image'/>
+		<meta content='{% if meta.img %}{{ meta.img | url }}{% else %}{{ theme_url }}/img/home-bg.webp{% endif %}' name='twitter:image'/>
 
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,7 +39,7 @@
         </nav>	
 		{% endif %}
 		<!-- Page Header-->
-		<header class="masthead" style="background-image: {% if meta.img %} url({{ meta.img }}) {% else %} url('{{ theme_url }}/img/home-bg.jpg'){% endif %};">
+		<header class="masthead" style="background-image: {% if meta.img %} url({{ meta.img }}) {% else %} url('{{ theme_url }}/img/home-bg.webp'){% endif %};">
 			<div class="container position-relative px-4 px-lg-5">
 				<div class="row gx-4 gx-lg-5 justify-content-center">
 					<div class="col-md-10 col-lg-8 col-xl-7">
@@ -116,6 +116,6 @@
 		<script src="{{ theme_url }}/js/scripts.js"></script>
 		{% endif %}
 		<!-- Font Awesome icons (free version)-->
-		<script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+		<script defer src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
 	</body>
 </html>
