@@ -1,5 +1,5 @@
 # Clean-Blog
-A clean, Bootstrap blog theme for Pico CMS Designed by [Start Bootstrap](http://startbootstrap.com/template-overviews/clean-blog/)
+A clean, Bootstrap blog theme for Pico CMS Designed by [Start Bootstrap](https://startbootstrap.com/theme/clean-blog)
 
 ## Installation under Pico CMS >= 2.0
 
@@ -62,8 +62,6 @@ rewrite_url: true
 -	You also need to edit the 'Title’ and 'Description’ of this new file, which both will be displayed on the blog articles list. You can also add a picture if needed in the 'Img’ field.
 -	Add as many articles as you need by creating one such new file per article.
 -	There is no need to restart anything, your blog and article should now be displayed properly, and the list of articles be updated too.
-
-
 
 
 
