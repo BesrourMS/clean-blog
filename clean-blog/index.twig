@@ -46,10 +46,13 @@
 						<div class="site-heading">
 							<h1>{{ site_title }}</h1>
 							<span class="subheading">{{ meta.tagline }}</span>
-							{{ total_pages }}
-							{{ page_number }}
 						</div>
 					</div>
+					{% if page_number < 2 %}
+					<div class="col-md-10 col-lg-8 col-xl-7">
+						<p class="text-white text-center mb-0">A total of {{ pages | length  - 2}} articles have been published.</span>
+					</div>
+					{% endif %}
 				</div>
 			</div>
 		</header>		
