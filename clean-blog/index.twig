@@ -20,7 +20,11 @@
 		<meta content='{{ config.twitter }}' name='twitter:creator'/>
 		<meta content='{{ meta.description|striptags }}' name='twitter:description'/>
 		<meta content='{% if meta.img %}{{ meta.img | url }}{% else %}{{ theme_url }}/img/home-bg.webp{% endif %}' name='twitter:image'/>
-
+{% if page_number > 1 %}
+		<link rel="canonical" href="{{ current_page.url }}page/{{ page_number }}" />
+		<link rel="prev" href="{{ current_page.url }}page/{{ page_number - 1 }}">
+{% endif %}
+		<link rel="next" href="{{ current_page.url }}page/{{ page_number + 1 }}">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<!-- Google fonts -->
