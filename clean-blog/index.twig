@@ -24,7 +24,9 @@
 		<link rel="canonical" href="{{ current_page.url }}page/{{ page_number }}" />
 		<link rel="prev" href="{{ current_page.url }}page/{{ page_number - 1 }}">
 {% endif %}
+{% if total_pages > page_number %}
 		<link rel="next" href="{{ current_page.url }}page/{{ page_number + 1 }}">
+{% endif %}
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<!-- Google fonts -->
