@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-		<meta name="description" content="{{ meta.description|striptags }}">
+		<meta name="description" content="{% if meta.description %}{{ meta.description|striptags }}{% else %}{{ content|striptags|length > 87 ? content|spaceless|striptags|slice(0, 87) ~ '...' : content|spaceless|striptags }}{% endif %}">
 		<title>{{ meta.title }} - {{ site_title }}</title>
 		<!-- [ Social Media Meta Tags ] -->
 		<meta property='og:url' content='{{ current_page.url }}' />
